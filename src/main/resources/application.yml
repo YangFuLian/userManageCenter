@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: user-center
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yfl?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 12345
+
+  #session失效时间
+  session:
+    timeout: 86400
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+
